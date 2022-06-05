@@ -1,0 +1,7 @@
+com\padma\Advartise\Controller\OlxAdvertisesController.class
+com\padma\Advartise\entity\Advertises.class
+com\padma\Advartise\Repo\AdvertisesRepository.class
+com\padma\Advartise\service\OlxAdvertisesServiceImpl.class
+com\padma\Advartise\entity\AdvertisesApiResponcse.class
+com\padma\Advartise\OlxAdvertisesApplication.class
+com\padma\Advartise\service\OlxAdvertisesService.class
