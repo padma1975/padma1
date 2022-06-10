@@ -1,0 +1,22 @@
+create database sandy;
+create table emp
+(empid int,empname varchar(40),empsal double, deptid int);
+insert into emp 
+values(101,'padma',280000,24),
+(102,'vasu',580000,25),
+(103,'paddu',68000,40),
+(104,'dad',89000000,60),
+(105,'amma',67000,80);
+
+select * from emp;
+drop table emp;
+
+alter table emp drop deptid;
+alter table emp add deptid int;
+update emp set deptid=24 where empid=101;
+==============================================================================
+use Test;
+Create table Orderservice(OrderId int primary key,description varchar(50),Amount numeric(10,3),OrderDate date);
+Create table productservice(ProductId  int primary key,Productname varchar(50),quantity int,description varchar(50),price numeric(10,3));
+select * from Orderservice;
+ select * from productservice;
