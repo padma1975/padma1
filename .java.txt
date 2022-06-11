@@ -1,0 +1,108 @@
+package april29;
+import java.io.*;
+import java.util.*;
+public class Customer { 
+    private int customerId; 
+    private String customerName; 
+    private String emailId; 
+    private long phoneNo; 
+    Scanner sc=new Scanner(System.in); 
+    ArrayList<Integer> customerIdlist= new ArrayList<Integer>(); 
+    ArrayList<String> customerNamelist= new ArrayList<String>(); 
+    ArrayList<String> emailIdlist= new ArrayList<String>(); 
+    ArrayList<Long> phoneNolist= new ArrayList<Long>(); 
+public void addCustomer(){ 
+    System.out.println("Enter customerId: "); 
+    customerIdlist.add(sc.nextInt());
+    sc.nextLine(); 
+    System.out.println(customerIdlist);
+    System.out.println("Enter customerName: ");
+    customerNamelist.add(sc.nextLine()); 
+    System.out.println(customerNamelist); 
+    System.out.println("Enter emailId: "); 
+    emailIdlist.add(sc.nextLine()); 
+    System.out.println(emailIdlist); 
+    System.out.println("Enter phoneNo: "); 
+    phoneNolist.add(sc.nextLong()); 
+    System.out.println(phoneNolist); 
+    System.out.println("Customer details added successfully.."); 
+} 
+public void updateCustomerPhoneNumber(int id, Long phoneNumber){ 
+    int index=customerIdlist.indexOf(id); 
+    System.out.println(index); 
+    System.out.println(phoneNolist.indexOf(phoneNumber)); 
+    phoneNolist.set(index, phoneNumber); 
+    System.out.println("Updated Phone Number Successfully.."); 
+} 
+public void deleteCustomer(int id){ 
+    System.out.println("Enter customer id to delete: "); 
+    int cid=sc.nextInt(); 
+    sc.nextLine(); 
+    int index=customerIdlist.indexOf(id); 
+    customerIdlist.remove(index); 
+    customerNamelist.remove(index); 
+    emailIdlist.remove(index); 
+    phoneNolist.remove(index); 
+    System.out.println("deleted customer Successfully.."); 
+} 
+public void DisplayAllCustomers(){ 
+    int totalsize=customerIdlist.size(); 
+    System.out.println(totalsize); 
+    for(int i=0;i<totalsize;i++){ 
+        System.out.println("Customer ID"+Integer.toString(i)+" : "+customerIdlist.get(i)); 
+        System.out.println("Customer Name"+Integer.toString(i)+" : "+customerNamelist.get(i)); 
+        System.out.println("email Id"+Integer.toString(i)+" : "+emailIdlist.get(i)); 
+        System.out.println("Phone Number"+Integer.toString(i)+" : "+phoneNolist.get(i)); 
+    } 
+} 
+public void getCustomerbyPhoneNumber(int id){ 
+    int index=phoneNolist.indexOf(id); 
+    System.out.println("Customer ID : "+customerIdlist.get(index)); 
+    System.out.println("Customer Name : "+customerNamelist.get(index)); 
+    System.out.println("email Id : "+emailIdlist.get(index)); 
+    System.out.println("Phone Number : "+phoneNolist.get(index)); 
+} 
+public static void main(String args[]) { 
+    var classInstance1 = new Customer(); 
+    var classInstance2 = new Customer(); 
+    var classInstance3 = new Customer(); 
+    var classInstance4 = new Customer(); 
+    var classInstance5 = new Customer(); 
+    Scanner sc=new Scanner(System.in); 
+    while (true) { 
+        System.out.println("***Enter your Choice****"); 
+        System.out.println("1.Add Customer"); 
+        System.out.println("2.Update Phone Number"); 
+        System.out.println("3.Delete a customer"); 
+        System.out.println("4.Display all the customers"); 
+        System.out.println("5.Display for a single id"); 
+        System.out.println("6.Quit"); int option = sc.nextInt();//Takes user input weather 1 or 2 or 3 ....etc 
+        sc.nextLine(); 
+        switch (option) { 
+            case 1: classInstance1.addCustomer();
+            break; 
+            case 2: 
+            System.out.print("Enter customerId: "); 
+            int id = sc.nextInt(); 
+            System.out.print("Enter new phoneNo: "); 
+            Long phoneNumber = sc.nextLong(); 
+            classInstance2.updateCustomerPhoneNumber(id, phoneNumber); 
+            break; 
+            case 3: 
+            System.out.print("Enter customerId: "); 
+            id = sc.nextInt(); 
+            classInstance3.deleteCustomer(id); 
+            break; 
+            case 4: 
+            classInstance4.DisplayAllCustomers(); 
+            break; 
+            case 5: 
+            System.out.print("Enter customerId: "); 
+            id = sc.nextInt(); 
+            classInstance5.getCustomerbyPhoneNumber(id); 
+            break; 
+            case 6: break; 
+            }
+         }
+     }
+ }
