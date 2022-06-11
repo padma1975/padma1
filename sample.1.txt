@@ -1,0 +1,171 @@
+public class Demo{
+     static int age;
+     static string name;
+     static void diosp(){
+          system.out.println("Age is: " +age);
+          system.out.println("Age is: " +name);
+          }
+          public static void main(string args[])
+          {
+              age = 30;
+              name ="Arya";
+              disp();
+          }
+          }
+          
+import java.util.Scanner;
+public class StudentMain
+{
+    public static void main(String[] args)
+    {
+        Student s=getStudentDetails();
+        s.calculateAvg();
+        s.findGrade();
+        System.out.println("Id:" +s.getId());
+        System.out.println("Name:" +s.getName());
+        System.out.println("Average:"+String.format("%.2f",s.getAverage()));
+        System.out.println("Grade:" +s.getGrade());
+    }
+    public static Student getStudentDetails()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the id:");
+        int id=Integer.parseInt(sc.nextLine());
+        String name=sc.nextLine();
+        System.out.println("Enter the no of subjects:");
+        int n=sc.nextInt();
+        if(n<=0)
+        {
+            while(n<=0)
+            {
+                System.out.println("Invalid number of subject");
+                System.out.println("Enter the no of subjects");
+                n=sc.nextInt();
+            }
+        }
+        int arr[]=new int[n];
+        for(int a=0;a<n;a++)
+        {
+            System.out.println("Enter mark for subject "+(a+1)+":");
+            int b=sc.nextInt();
+            if(b<0||b>100)
+            {
+                System.out.println("Invalid Mark");
+                System.out.println("Enter mark for subject "+(a+1)+":");
+                b=sc.nextInt();
+            }
+            arr[a]=b;
+        }
+        Student obj=new Student(id,name,arr);
+        obj.setId(id);
+        obj.setName(name);
+        return obj;
+    }
+}
+
+
+
+
+
+
+private static final String Student = null;
+
+	public static void main(String[] args) {
+		Integer StudentId;
+		String StudentName;
+		String  CourseName;
+		    public void Student1(Integer StudentId, String StudentName, String course)
+		System.out.println("constactor with parameter");
+		{
+			StudentId=StudentId;
+			StudentName=StudentName;
+			
+			course=course;
+		}
+			
+		}
+		public static void main1 (String args[]) {
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Sample Input1:");
+			System.out.println("Enter Student's Id :");
+			Integer StudentId=sc.nextInt();
+			sc.nextLine();
+			System.out.println("Enter Student's Name :");
+			String StudentName=sc.nextLine();
+			System.out.println("Enter Student course name :");
+			String Coursename=sc.nextLine();
+		
+
+	}
+
+}
+
+
+
+
+
+
+
+[3:58 PM] Padma Peddaseshugalla
+import java.util.Scanner;
+public class StudentMain
+{
+    public static void main(String[] args)
+    {
+        Student s=getStudentDetails();
+        s.calculateAvg();
+        s.findGrade();
+        System.out.println("Id:" +s.getId());
+        System.out.println("Name:" +s.getName());
+        System.out.println("Average:"+String.format("%.2f",s.getAverage()));
+        System.out.println("Grade:" +s.getGrade());
+    }
+    public static Student getStudentDetails()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the id:");
+        int id=Integer.parseInt(sc.nextLine());
+        String name=sc.nextLine();
+        System.out.println("Enter the no of subjects:");
+        int n=sc.nextInt();
+        if(n<=0)
+        {
+            while(n<=0)
+            {
+                System.out.println("Invalid number of subject");
+                System.out.println("Enter the no of subjects");
+                n=sc.nextInt();
+            }
+        }
+        int arr[]=new int[n];
+        for(int a=0;a<n;a++)
+        {
+            System.out.println("Enter mark for subject "+(a+1)+":");
+            int b=sc.nextInt();
+            if(b<0||b>100)
+            {
+                System.out.println("Invalid Mark");
+                System.out.println("Enter mark for subject "+(a+1)+":");
+                b=sc.nextInt();
+            }
+            arr[a]=b;
+        }
+        Student obj=new Student(id,name,arr);
+        obj.setId(id);
+        obj.setName(name);
+        return obj;
+    }
+}
+会社案内 | Airwallex JP
+Airwallexは、ビジネスのグローバルな運営方法に革命を起こすテクノロジー企業です。当社の金融インフラストラクチャは、企業が現在のグローバル金融システムの困難なしに、国際的に事業を行うための最新のテクノロジースタックを提供します。
+
+[4:07 PM] Padma Peddaseshugalla
+public class Student{ private int id; private String name; private int marks[]; private float average; private char grade; public Student(int a,String b,int[] c) { id=a; name=b; marks=c; } public void setId(int n) { id=n; } public int getId() { return id; } public void setMarks(int[] marks) { this.marks=marks; } public int[] getMarks() { return marks; } public void setName(String n) { name=n;  } public String getName() { return name; } public void setAverage(float n) { average=n; } public float getAverage() { return average; } public void setGrade(char n) { grade=n; } public char getGrade() { return grade; } public void calculateAvg() { float a1=0.0F; for(int a=0;a<this.getMarks().length;a++) { a1=a1+this.marks[a]; } this.setAverage(a1/getMarks().length); } public void findGrade() { int min=this.marks[0]; for(int b=0;b<this.getMarks().length;b++) { if(this.marks[b]<min)  { min=this.marks[b]; } } if(min<50) { this.setGrade('F'); } else if(this.getAverage()>=80 && this.getAverage()<=100) { this.setGrade('O'); } else { this.setGrade('A'); }
+===========================================
+public class HelloWorld {
+
+	public static void main(String[] args) {
+      System.out.println("Hello World !");
+	}
+
+}
