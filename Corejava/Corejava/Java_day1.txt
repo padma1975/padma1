@@ -1,0 +1,105 @@
+JAVA:
+https://docs.oracle.com/en/java/    ===Documentation=====
+https://www.javatpoint.com/internal-details-of-hello-java-program 
+
+Java is a object oriented programming language.It is a plate form independent.
+
+OOPS Concepts:
+
+Classes	     :A class can also be defined as a blueprint from which you can create an individual object
+Objects	     : 
+
+OOPS Principles
+
+Inheritance  :When one object acquires all the properties and behaviors of a parent object, it is known as inheritance
+Abstraction  :Hiding internal details and showing functionality is known as abstraction. 
+Encapsulation:Binding (or wrapping) code and data together into a single unit are known as encapsulation. 
+Polymorphisam:If one task is performed in different ways, it is known as polymorphism.
+
+======Create a class in eclipse======
+
+files->New->Class  gives class name and package name(com).
+
+var,fields/methods are in camel case(helloWorld)
+class name in pascal case(HelloWorld)
+======================================
+class members are two types:
+1)ststic -> class level
+2)instance -> instance level
+
+======Data types in java =============
+1) primitive types
+they are stored in the stack memory.
+	a)integer -> byte 1byte,shor 2bytes,int 4bytes,long 8bytess,double 8bytes,long 8byte,char 2bytes
+	b)float   -> float 4bytes
+	c)Boolean -> boolean 1byte
+EX:     1) byte b1 = -128 to 127
+	2) short s1 = -32767 to 32768
+	3) int i1 = 567890
+	4) long l1 = 1234567890L
+
+
+	int m1 = 5;
+	m1 = b1;//implicite conversion
+	b1 = (byte)m1;  //explicite casting / conversion
+	
+	short b3 =(short)(b1+b2);//use the cast operation
+	system.out.println(b3);
+int marks;
+marks =56;
+int per = marks/100;
+
+pre and post increment
+
+b1 = 127
+b = ++b  => 128
+b = b++  => 128
+
+2) Reference types
+	
+6)=============Perfect num===============
+
+package com;
+
+import java.util.Scanner;
+
+public class Perfect_num {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n;
+		System.out.println("enter a number:");
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		int sum = 0;
+		
+		for(int i=1;i<n-1;i++) {
+			if(n % i ==0) {
+				sum = sum + i;	
+			}
+		}
+		if(sum == n) {
+			System.out.println(n +"is a perfect num");
+		}else {
+			System.out.println(n+"is not a perfect num");
+		}
+		
+	}
+
+}
+
+
+
+[5:51 PM] Sajitha (Guest)
+Write an application that displays every perfect number from 1  through 10,000. 
+A number is perfect if it equals the sum of all the smaller positive  integers that divide evenly into it. 
+For example, 6 is perfect because 1, 2, and 3 divide
+
+evenly into it and their sum is 6
+
+Write an application named DisplayMultiplicationTable that displays a table of the products of every 
+combination of two integers from 1 through 10.
+
+
+
+

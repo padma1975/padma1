@@ -1,0 +1,157 @@
+
+1) Introduction to Java (JVM, compiling & running Hello world program, Java data types, while loop, for loop)
+2) Classes & objects (class attributes, constructors, methods, naming conventions, creating java object, variable arguments, static keyword, java arrays)
+3) OOP concepts (Basics of data abstraction, encapsulation, inheritance & polymorphism)
+
+
+
+
+1) Inheritance & Polymorphism (Types of inheritance, types of polymorphism, method overloading, method overriding, final keyword, singletone classes, is-a relationship vs has-a relationship, Object class, Important methods of class
+ Object like - [hashCode(), equals(), clone(), toString()], super keyword, garbage collector)
+2) Abstract classes
+
+
+
+
+1) Interfaces
+2) Packages
+
+
+
+
+1) Wrapper classes
+2) String, StringBuffer& StringBuilder
+3) Reflection
+
+
+
+
+1) Annotations
+2) Enums
+3) Nested classes
+
+
+
+
+
+1) What is an exception?
+2) Using try/catch
+3) Exception class hierarchy
+4) Checked & unchecked exception
+5) try with multiple catch
+6) Nested try/catch statements
+7) 'throws' keyword
+8) Exception handling in method overriding
+9) Try with resources
+10) 'finally' keyword
+11) Custom exception
+12) Introduction to File Handling
+13) Byte & character streams
+14) Java IO class hierarchy
+15) File reading & writing
+
+
+
+1) Piped streams
+2) Sequence streams
+3) Handling primitive data
+4) Using RandomAccessFile
+5) Object Serialization
+6) Type of Multitasking systems
+7) What is a Thread?
+8) Creating a thread using Runnable & Thread
+9) Thread class methods
+
+
+
+
+1) Thread life cycle
+2) Daemon threads
+3) Thread priority
+4) Object synchronization
+5) Inter-threaded communication
+6) What is collection framework?
+7) Interface Collection & Iterator
+8) Collection framework hierarchy
+9) Using basic classes like LinkedList, Vector, ArrayList
+10) Hashing process i.e. buckets, hash collision, load factor etc
+11) Using basic classes like Hashtable, HashMap, TreeMap, HashSet, TreeSet, LinkedHashSet
+
+
+
+
+1) Synchronizing collection object using Collections class
+2) Sorting a collection using Collections class
+3) Fail-fast vs Fail-safe iterators
+4) Why Generics?
+5) Generic Types
+6) Single typeparameter example
+7) Multiple typeparameter example
+8) Bounded typeparameters
+9) Wildcards
+
+
+
+1) Introduction to JDBC
+2) Types of Drivers
+3) JDBC program to run basic SQL queries(SELECT, INSERT, UPDATE, DELETE)
+4) Statement, PreparedStament & CallableStatement
+5) Functional interfaces
+
+
+
+
+1) What is a labmda expression?
+2) Lambda expressions using core functional interfaces like Producer, Consumer, Function & Predicate
+3) Primitive specialization like IntPredicate, DoubleFunction etc.
+4) Default & static methods in core functional interfaces
+5) Types of method references
+6) Using method references
+7) What are streams?
+8) Collections vs Streams
+9) Streams API
+10) Stream operations
+
+
+
+
+1) Numeric Streams
+2) Collectors
+3) Grouping & Partitioning
+4) Parallel Streams
+5) Limitations of Date APIs prior to Java 8
+6) Date API - Important classes
+7) Using LocalDate, LocalTime, LocalDateTime, Duration, Period
+8) TemporalAdjusters
+9) Writing Custom TemporalAdjusters
+10) Date formatting
+11) Handling TimeZone
+
+
+
+
+1) Introduction to unit testing
+2) Write JUnit test method
+3) Assert methods
+4) Annotations - @BeforeClass, @AfterClass, @Before, @After, @Ignore, @Test, @Timeout
+5) Parameterized tests
+6) Handling exceptions in unit testing
+7) Test suite
+8) What is Mocking?
+9) Need for mocking
+10) What is Mockito?
+11) Benefits of Mockito
+12) Mockito methods - mock(), when(), verify(), spy(), reset(), doThrow(), doCallRealMethod(), doAnswer(), doNothing(), doReturn(), never(), timeout() etc.
+13) Configure Mockito in Maven project
+14) Writing Stubs
+15) Writing unit test cases using Mockito
+
+
+
+1) Introduction to SOLID principles
+2) Single Responsibility Principle (SRP)
+3) Open Closed Principle (OCP)
+4) Liskov Substitution Principle (LSP)
+5) Interface Segregation Principle (ISP)
+6) Dependency Inversion Principle (DIP)
+

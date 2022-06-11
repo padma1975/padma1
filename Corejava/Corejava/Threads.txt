@@ -1,0 +1,111 @@
+Process:
+	Process means a program in execution.
+
+* Unit of allowcation
+* Architectural construction
+* Each process has one or more threads.
+* Secure
+
+Thread:
+	A thread is a lightweight sub-process,the small unit of process. multithreading and multitasking both are under same 
+
+* Unit of execution.
+* Coding cinstruction that does not effect   architecture.
+* Each thread belongs to a process.
+* Not secure, a thread can write in the memory used by 
+another thread.
+
+What is Multithreading:
+
+	Multithreading is a model of program execution that allows for multiple threads to be created within a process, executing independently but concurrently sharing process resources. 
+
+Creating a thread:
+	Creating a thread in two ways:
+
+	* implement the Runnable interface. if has 	  only one method
+	* Extend the thread class and override the run  	  method.
+The run() method is the heart of the thread. in this method u can implement logic,functionality and behavior of the thread in the run method body.
+
+Context switching:
+
+	Context switching is the technique where CPU time is shared across all running processes and processor allocation is switched in a time bound fashion. To schedule a process to allocate the CPU, a running process is interrupted to a halt and its state is saved.
+
+Runnable interface:
+	When we extend Thread class, we can't extend any other class even we require and When we implement Runnable, we can save a space for our class to extend any other class in future or now.
+
+
+ArrayList is a single thread
+
+CpoyOnarrayList is multithreaded
+
+
+Every time u invoke a method to modify the list,java will process on a cpoy of the array.
+
+An iterator over the collection,will operate in an immutable cpoy of the collection.
+
+Single Thread:
+
+* ArrayList
+* HashSet,TreeSet
+* HashMap
+
+
+MultiThread:
+* CpoyOnArrayList
+* ConcurrentSkipListSet
+* ConcurrentHashMap
+
+Concurrent threads:
+	Threads can access the segmant concurrently and obtained a lock only on that segment that are used.
+
+1)package com.threads;
+
+public class ThreadPropertyDemo {
+
+	public static void main(String[] args) {
+		System.out.println("start of main");
+		// Get a reference to main thread
+		Thread mainThread=Thread.currentThread();
+		System.out.println("Current Thread "+mainThread.getName()
+		+" and priority:" + mainThread.getPriority());
+		
+		Thread3A thread3a = new Thread3A("Thread3A");
+		System.out.println(thread3a.getName()+"and priority"+
+				thread3a.getPriority());
+		
+		Thread3B thread3b = new Thread3B("Thread3B");
+		System.out.println(thread3b.getName()+"and priority"+
+				thread3b.getPriority());
+		
+		thread3a.start();
+		thread3b.start();
+	}
+}
+
+class Thread3A extends Thread{
+	public Thread3A(String name) {
+		super(name);
+	}
+	@Override
+	public void run() {
+		for(int i=0;i<10;i++) {
+			System.out.println(this.getName()+"is executing  and printins : "+i);
+		}
+		System.out.println("Exit-Thread3"+this.getName());
+	}
+}
+
+class Thread3B extends Thread{
+	public Thread3B(String name) {
+		super(name);
+	}
+	@Override
+	public void run() {
+		for(int i=0;i<10;i++) {
+			System.out.println(this.getName()+"is executing  and printins : "+i);
+		}
+		System.out.println("Exit-Thread3"+this.getName());
+	}
+}
+
+

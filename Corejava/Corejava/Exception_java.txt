@@ -1,0 +1,173 @@
+JRE provides additional services
+1) Memory Management and Garbage Collections
+2) Excepion Handling
+3) Just in Compiler
+4) Code security
+
+Excepion Handling in JAVA with the following key words
+
+	TRY,CATCH,FINALLY, and THROWS.
+
+try-- with resources
+
+Throwable => Error and Exception
+
+Deals with exception in two ways:
+
+1) deal with the within the method
+2) Pass on the exception out of exception
+
+Eigther try executes completly or catch executes
+Catch will executes if only it catches an exception throen from try
+
+javas Exceptions are categorised as two types:
+
+1) Unchecked Exceptions  => Error class RunTimeException
+
+2) Checked Exceptions    => All exception that descend from 
+
+
+FILE:  Physical file in harddisk
+PATH:  file path
+FILE ID:
+Read and Write in file:
+
+FIle Streams can be used to input and output data as ytes or characters.
+
+Byte based Streams: I/o data in binary formate
+Charactor stream  :input and output data is sequence of characters,where every
+character is 2 byte.
+
+they are 3 streams in java.
+* System.in  : take data from the i/p pass to program
+* System.out : take data from program
+* System.err :
+
+* Java.io    :
+* Java.nio   :
+
+steps to check Weather a path or file exists
+*open file
+*writing a file
+*read a file
+*close a file
+*delete a file
+
+1)package com.path.demo;
+import java.nio.file.AccessMode.*;
+import java.io.IOException;
+import java.nio.file.*;
+
+public class PathDemo {
+
+	public static void main(String[] args) {
+		String path ="D:\\Programs\\file.txt";
+		Path filePath =Paths.get(path);
+		
+		int count=filePath.getNameCount();
+//		System.out.println("Path is "+filePath.toString());
+//		System.out.println("File name is:"+filePath.toString());
+//		System.out.println("There are:"+count+"elements in file path");
+		Path fullPath = filePath.toAbsolutePath();
+		System.out.println(fullPath);
+		
+		try {
+			filePath.getFileSystem().provider().checkAccess(filePath, READ);
+			System.out.println("File can be read and execute.");
+		}
+		catch(IOException ie) {
+			System.out.println("File can not be used for the applycation");
+			
+		}
+	}
+
+}
+
+2)package com.stream.demo;
+
+import java.io.*;
+
+public class ScreenOut {
+
+	public static void main(String[] args) {
+		String s = "ABCD";
+		byte[] data = s.getBytes();
+		
+		OutputStream output = null;
+		try {
+			output = System.out;
+			output.write(data);
+			output.flush();
+			output.close();
+		}
+		catch(Exception e) {
+			System.out.println("Message :"+ e.toString());
+		}
+
+	}
+
+}
+
+3)package com.stream.demo;
+import static java.nio.file.StandardOpenOption.* ;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.*;
+
+public class ScreenOut {
+
+	public static void main(String[] args) {
+		
+		String path = "D:\\Programs\\filesFolder\\file2";
+		Path file=Paths.get(path);
+		String s ="ABCD";
+		byte[] data = path.getBytes();
+		
+		OutputStream output = null;
+		try {
+			output = new BufferedOutputStream(Files .newOutputStream(file, CREATE));
+			output.write(data);
+			output.flush();
+			output.close();
+		}
+		catch(Exception e) {
+			System.out.println("Message :"+ e.toString());
+		}
+
+	}
+
+}
+4)package com.stream.demo;
+import static java.nio.file.StandardOpenOption.* ;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.*;
+
+public class ScreenOut {
+
+	public static void main(String[] args) {
+		
+		String path = "D:\\Programs\\filesFolder\\file1.txt";
+		Path file = Paths.get(path);
+		InputStream input = null;
+		try {
+			input=Files.newInputStream(file);
+			BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+			String s = reader.readLine();
+			
+			while(s!= null) {
+				s=reader.readLine();
+				System.out.println(s);
+			}
+				
+			reader.close();
+		}
+		catch(Exception e) {
+			System.out.println("message:"+e.toString());
+		}
+	}
+
+}
+

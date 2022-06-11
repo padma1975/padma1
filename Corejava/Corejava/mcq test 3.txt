@@ -1,0 +1,167 @@
+Zensar Week 3 Assessment on Spring Data Jpa and Spring Cloud
+Required
+1.Employee name
+Datta Sai Battu
+2.Employee ID
+67800
+3.Organization Name
+Zensar 
+4.What are the different type of runners available in spring boot ?
+ApplicationRunner and CommandLineRunner
+ApplicationRunner and Command Runner
+AppRunner and CommandRunner
+AppRunner and CommandLineRunner
+5.Which method name is correct to find employee by name and Age in spring data jpa?
+findAgeAndName(Integer age, String name)
+findByAgeOrName(Integer age, String name)
+findEmployeeByAgeOrName(Integer age, String name)
+findByAgeAndName(Integer age, String name)
+6.Which method name is correct to find Product either by name or brand or price in
+  spring data jpa ?
+findProductByNameAndBrandAndPrice(String name, String brand, BigDecimal price)
+findProductByNameOrBrandOrPrice(String name, String brand, BigDecimal price)
+findByNameOrBrandOrPrice(String name, String brand, BigDecimal price)
+findByNameAndBrandAndPrice(String name, String brand, BigDecimal price)
+7.What does one mean by Load Balancing?
+overload workload on one resource
+distribution of workloads across multiple computing resources
+increase capacity of existing computing resource
+None of these
+8.What is circuit breaker ?
+Circuit Breaker is a technique, where we stop executing an erroneous method and redirect every request to a fallback method.
+Circuit Breaker is a technique, where we continue executing an erroneous method and throw exception
+Circuit Breaker is a technique, where we stop executing the current process
+Circuit Breaker is a technique, where we doesn't need a fallback method
+9.If table name is different than the object name then which annotation will be used to
+  map table with java object ?
+@Entity
+@Data
+@Table
+@Repository
+10.Which annotation will be used to define repository class in spring data jpa ?
+@Repository
+@Repo
+@Dao
+None of these
+11.Which repository interface used for generic CRUD operations ?
+CrudRepo
+CrudRepository
+Repository
+Crud
+12.Which repository interface used for pagination and sorting?
+CrudRepository
+Repository
+PagingAndSortingRepository
+PaginationAndSortingRepo
+13.Which repository is the immeidate extension of CrudRepository?
+Repository
+PagingAndSortingRepository
+JpaRepository
+JpaRepo
+14.Which repository is the extension of Jpa specific features ?
+JpaRepo
+PagingAndSortingRepository
+CrudRepository
+JpaRepository
+15.Which starter maven dependency will be used to enable data-jpa ?
+<dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-starter-data-jpa</artifactId> </dependency>
+<dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-jpa</artifactId></dependency>
+<dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-data-jpa</artifactId> </dependency>
+none of these
+16.Which dependency will be used in maven to include actuator ?
+<dependencies> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-actuator</artifactId> </dependency> </dependencies>
+<dependencies> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-actuator</artifactId> </dependency> </dependencies>
+<dependencies> <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-actuator</artifactId> </dependency> </dependencies>
+none of these
+17.Which actuator endpoint will be used to check health of the app ?
+/info
+/health
+/env
+/beans
+18.Which annotation will help to maintain order or execution ?
+@Sequence
+@Order
+@startValue
+@OrderInfo
+19.Which annotation will be used to map the bean to a particular profile?
+@Bean
+@Component
+@Profile
+@Configuration
+20.Which configuration property is used to set active profile ?
+spring.active.profile
+spring.profiles.active
+active.profile
+profile.active
+21.Which is the correct application properties file name for prod profile ?
+application-dev.properties
+app-prod.properties
+application-prod.properties
+application-profile-prod.properties
+22.Which configuration property is used to create application log file ?
+logging.file.name
+logging.name
+logging.file-name
+log.file.name
+23.Which configuration property is used to set DEBUG level logging for
+  org.springframework?
+logging.level.org.springframework=INFO
+log.level.org.springframework=DEBUG
+logging.level.org.springframework=DEBUG
+logging.level.org.spring=DEBUG
+24.Which is correct link of swagger ui in localhost ?
+http://localhost:8080/swagger.html
+http://localhost:8080/swagger-ui.xml
+http://localhost:8080/v2-api-ui.html
+http://localhost:8080/swagger-ui.html
+25.Which method of rest template is used to fetch the API response directly into the
+  domain object?
+getForObject
+getMethod
+getForPojo
+getObject
+26.Which method of rest template is used to fetch and returns the response as
+  ResponseEntity?
+getEntity
+getMethod
+getForEntity
+getResponse
+27.Which method of rest template is used to call post method?
+postForEntity
+getForEntity
+postEntity
+postRequest
+28.What is Microservice ?
+break project into independent services
+break project into dependent services
+integrate small services into a big project
+none of these
+29.Which annotation Is used to configure eureka server ?
+@EnableEurekaClient
+@EnableServerEureka
+@EnableServerClient
+@EnableEurekaServer
+30.Which annotation is used to configure Eureka client?
+@EnableEurekaClient
+@EnableServerEureka
+@EnableServerClient
+@EnableEurekaServer
+31.Which one is the default port of Eureka Server?
+8777
+8761
+8671
+8871
+32.What is the default value of configuration property: eureka.client.register-with-eureka ?
+null
+TRUE
+FALSE
+none of these
+33.Which starter maven dependency is used for Eureka Server ?
+<dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId> </dependency>
+<dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-netflix-eureka</artifactId> </dependency>
+<dependency> <groupId>org.springframework.cloud</groupId> <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId> </dependency>
+none of these
+You can print a copy of your answer after you submit
+Never give out your password.Report abuse
+This content is created by the owner of the form. The data you submit will be sent to the form owner. Microsoft is not responsible for the privacy or security practices of its customers, including those of this form owner. Never give out your password.
+Powered by Microsoft Forms | The owner of this form has not provided a privacy statement as to how they will use your response data. Do not provide personal or sensitive information. | Terms of use

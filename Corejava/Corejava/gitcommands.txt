@@ -1,0 +1,40 @@
+[6:10 PM] Sajitha (Guest)
+
+
+To remove  a file from the project 
+
+git rm <filename> Keep the file but  not to be tracked by git
+
+git rm --cached <filename>  //delete the version control cache  , the file remians in the folder
+
+Rename a file
+
+git  mv <filename> <rename> git checkout -b <branchName> //-b  will  create a new branch , 
+
+To move to an exixting branch
+
+git checkout main  git stash  // your work is shelved and continue to work git stash list git stash show git  stash pop // changes will be dropped back into the working directory
+
+After checkoput to master 
+
+git merge new_Branch git reset git branch branchName // only create a branch git clone url //to clone the repository to the desktop git remote  -v //Lists remotes and URLs git remote add  <name> <remote-url>  provide the nmae for a remote server git pull
+
+[6:10 PM] Sajitha (Guest)
+git push -u origin main git add <fileName> M =Modified
+
+A =New file added to staging area
+
+?? = New file untracked by Git diff  
+
+= what changes have i staged that are ready to be committed? what changes have i made but not yet staged diff --staged  
+
+what changes have i staged that are ready to be committed 
+
+git log  
+
+git log -2 // to see last few commits specified by the  number
+
+git log --oneline // to see all in shorter way
+
+git log --stat // detailed view git log --patch // even more detail , will give the full diff of the exact changes in each file with each commit
+

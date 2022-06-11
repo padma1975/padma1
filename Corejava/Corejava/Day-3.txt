@@ -1,0 +1,166 @@
+=======================INHERITANCE================
+========ShapesDriver class===============
+package InheritanceDemo;
+
+public class ShapesDriver {
+
+	public static void main(String[] args) {
+		Triangle t1 = new Triangle();
+		
+		Triangle t2 = new Triangle();
+		
+		t1.setWidth(4.0);
+		t1.setHeight(4.0);
+		t1.style = "Filled";
+		
+		t1.showDimension();
+		t1.showStyle();
+		System.out.println("area of triangle1 :"+t1.calculateArea());
+//=============Rectangle class ====================
+		Rectangle rect = new Rectangle();
+		
+		rect.setWidth(4.0);
+		rect.setHeight(8.0);
+		//rect.showDimension();
+		System.out.println("========== Rectangle ===============");
+		System.out.println("area of Rectangle :"+rect.calculateArea());
+	}
+
+}
+====================== TwoDShape  ========================
+package InheritanceDemo;
+
+public class TwoDShape {
+	private double width;
+	private double height;
+	
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+	void showDimension() {
+		System.out.println("with and height "+ width+"and"+height);
+	}
+}
+
+
+//=============child class=============
+class Triangle extends TwoDShape{
+	String style;
+	
+	double calculateArea() {
+		return getWidth() * getHeight();
+	}
+	void showStyle() {
+		System.out.println("Triangle is "+ style);
+	}
+}
+//==============         ================
+class Rectangle extends TwoDShape{
+	double calculateArea() {
+		return getWidth() * getHeight();
+	}
+}
+
+====================== INHERITANCE WITH CONSTRUCTOR===========
+========ShapesDriver class===============
+package InheritanceDemo;
+
+public class ShapesDriver {
+
+	public static void main(String[] args) {
+		Triangle t1 = new Triangle("filled",8.0,8.0);
+		
+		
+		
+		t1.showDimension();
+		t1.showStyle();
+		System.out.println("area of triangle1 :"+t1.calculateArea());
+//=============Rectangle class ====================
+		Rectangle rect = new Rectangle(4.0,8.0);
+		
+		//rect.setWidth(4.0);
+		//rect.setHeight(8.0);
+		//rect.showDimension();
+		System.out.println("========== Rectangle ===============");
+		System.out.println("area of Rectangle :"+rect.calculateArea());
+	}
+
+}
+
+====================== TwoDShape class  ========================
+package InheritanceDemo;
+
+public class TwoDShape {
+	
+	public TwoDShape(double width, double height) { // Constructor
+		//super();
+		this.width = width;
+		this.height = height;
+	}
+
+	private double width;
+	private double height;
+	
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+	void showDimension() {
+		System.out.println("with and height "+ width+"and"+height);
+	}
+}
+
+
+//=============child class=============
+class Triangle extends TwoDShape{
+	
+	String style;
+	public Triangle(String s,double w,double h) { // Constructor
+		super(w,h);
+		this.style = s;
+	}
+	
+	double calculateArea() {
+		return getWidth() * getHeight();
+	}
+	void showStyle() {
+		System.out.println("Triangle is "+ style);
+	}
+}
+//==============         ================
+class Rectangle extends TwoDShape{
+	
+	public Rectangle(double width,double height) {
+		super(width,height);
+	}
+	
+
+	double calculateArea() {
+		return getWidth() * getHeight();
+	}
+}
