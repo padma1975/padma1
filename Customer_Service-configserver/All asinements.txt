@@ -1,0 +1,412 @@
+•	studentId
+•	studentName
+•	studentAddress
+•	collegeName
+ Assume most of the students are from “NIT” college. So user has to give input whether the student is from NIT or not. 
+1.	If student belongs to NIT, give input as 'yes/YES' and  skip input for the attribute collegeName  and create student object with 3-argument constructor to initialize the values for studentId, studentName and studentAddress and  collegeName as “NIT”.
+2.	If student belongs to other college, give input as 'no/NO' and get college name from the user and create student object with 4-argument constructor to initialize all the values. 
+3.	Instead of Yes / No, if user enters different input then display 'Wrong Input' and get the input again.
+4.	From the Main method create 2 students one from NIT and the other from VIT
+Display the values same as in the sample output.
+Sample Input 1:
+Enter Student's Id:
+12
+Enter Student's Name:
+John
+Enter Student's address:
+Chennai
+Whether the student is from NIT(Yes/No):
+NO
+Enter the college name:
+SNS
+Sample Output 1:
+Student id:12
+Student name:John
+Address:Chennai
+College name:SNS
+*/
+
+package newPack;
+import java.util.Scanner;
+public class Student
+{
+private	int sID;
+private	String sName;
+private	String sAdd;
+private	String clgName;
+	void getDetails()
+	{
+		System.out.println("Student id: "+sID);
+		System.out.println("Student name : "+sName);
+		System.out.println("Address : "+sAdd);
+		System.out.println("College name : "+clgName);
+
+	}
+	public Student (int id, String name, String add, String clg )
+	{
+		sID=id;
+		sName=name;
+		sAdd=add;
+		clgName=clg;
+		//clg="NIT";
+	}
+	public Student (int id,String name,String add )
+	{
+		sID=id;
+		sName=name;
+		sAdd=add;
+		//clgName=clg;
+		clgName="NIT";
+		}
+	
+	public static void main(String[] args)
+	{		
+		int sID;
+		String sName;
+		String sAdd;
+		String clgName;
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter Student's Id :");
+		sID=sc.nextInt();
+		sc.nextLine();
+		System.out.println("Enter Student's Name :");
+		sName=sc.nextLine();
+		sc.nextLine();
+		System.out.println("Enter Student's Address :");
+		sAdd=sc.nextLine();
+		//Student S1=new Student();
+		while(true)
+		{
+			System.out.println("Whether the student is from NIT(Yes/No):");
+			String s1=sc.next();
+			if(s1.equalsIgnoreCase("yes"))  //||(s1.equals("Yes")){
+			{
+				Student S1=new Student(sID, sName, sAdd);
+				S1.getDetails();
+				break;
+			}
+			else if(s1.equalsIgnoreCase("no"))
+			{
+				sc.nextLine();
+				System.out.println("\n Enter college Name : ");
+				clgName=sc.nextLine();
+				Student S2=new Student(sID,sName,sAdd,clgName);
+				S2.getDetails();
+				break;				
+			}
+			else
+			{
+				System.out.println("\n Invalid Input");
+			}
+		}
+	}
+
+
+  
+//---------------------------------------------------------------DAY 2 -Assingment 2--------------------------------------------------------------------
+
+/*
+Create a class Book with private attributes  
+•	bookName
+•	bookPrice
+•	authorName. GT
+•	totalBookCount
+From the  main method ,get the details. Create an object for book class and assign the value for instance variable. Display the output  in the given format. 
+2 parameter constructor  to pass name and author name.
+3 parameter constructor to pass name , author name and price.
+Create a method to display the total count of Books , after all the books have been added.
+Sample Input 1:
+Enter the Book name:
+Java
+Enter the price:
+500
+Enter the Author name:
+Enstin
+Sample Output 1:
+Book Details
+Book Name : Java
+Book Price : 500
+Author Name : Enstin
+Total number of books available=1
+*/
+package newPack;
+import java.util.Scanner;
+public class Book {
+	private String bName;
+	private double bPrice;
+	private String authorName;
+	private int bCount;
+/*
+	public void setDetails(String Bname,String writer,double price) 
+	{
+		bName=Bname;
+		authorName=writer;
+		bPrice=price;
+	}*/
+	public void getDetails()
+	{
+		System.out.println("\n\nName : "+bName);
+		System.out.println("price : "+bPrice);
+		System.out.println("aothor Name : "+authorName);
+		//System.out.println("book availability : "+bCount);
+		bCount++;
+	}
+	Book (String Bname,String writer)
+	{
+		bName=Bname;
+		authorName=writer;
+	}
+	Book (String Bname,String writer,double price)
+	{
+		bName=Bname;
+		authorName=writer;
+		bPrice=price;
+	}
+	public void countOfBook()//(int cnt)
+	{
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Total number of books available=");
+		bCount=sc.nextInt();
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 String bName;
+		 double bPrice;
+		 String authorName;
+		 int bCount;
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Book Name :");
+		bName=sc.nextLine();
+		System.out.println("Book Price :");
+		bPrice=sc.nextDouble();
+		sc.nextLine();
+		System.out.println("Book Author Name :");
+		authorName=sc.nextLine();
+		
+		Book b1=new Book(bName,authorName);
+	    b1.getDetails();
+	    b1.countOfBook();
+	   // System.out.println("Total number of books available are="+bCount);
+	    Book b2=new Book(bName,authorName,bPrice);
+	    b2.getDetails();
+	    b2.countOfBook();
+	}
+}
+
+  
+  
+//---------------------------------------------------------------DAY1 -Assingment 1--------------------------------------------------------------------
+/*Write an application that displays every perfect number from 1  through 10,000. A number is perfect if it equals the sum of all the smaller positive  integers that divide evenly into it. For example, 6 is perfect because 1, 2, and 3 divide
+evenly into it and their sum is 6 */
+package Day1;
+public class Class3 {
+public static void main(String[] args) {
+		for (int num=1;num<=1000;num++)
+		{
+			int sum=0;
+			for(int i=1;i<=num/2;i++)
+			{
+				if(num%i==0) {
+					sum += i;
+				}
+			}
+			if(sum == num) {
+								System.out.println("Perfect Number : "+num);	
+			}
+		}
+	}
+}
+
+  
+  
+  
+//---------------------------------------------------------------DAY1 -Assingment 2--------------------------------------------------------------------
+//Write an application named DisplayMultiplicationTable that displays a table of the products of every combination of two integers from 1 through 10.
+package Day1;
+public class Class2 {
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//System.out.println("hello");
+				for(int i=1;i<=10;i++)
+				{
+					for(int j=1;j<=10;j++)
+					{
+						System.out.print(i*j+"\t");
+					}
+					System.out.println();
+				}
+	}
+}
+
+
+
+
+Create class Student
+
+Id, name, courseName,  //private fields
+showDetails() //This method  should display the details.
+Three parameter constructor
+Create class Hosteller
+
+messFee , roomRent //private fields
+
+claculateHostelFee() //return the fee
+
+ 
+
+package employee1;
+
+import java.util.Scanner;
+
+
+
+import java.io.*;
+	import java.util.*;
+	public class Student2 {
+	private Integer StudentId;
+	private String StudentName;
+	private String coursename;
+
+	public void Student1(Integer StudentId, String StudentName, String StudentAddress)
+	{
+	System.out.println("Sample output1:");
+	System.out.println("Student id:"+StudentId);
+	System.out.println("Student Name:"+StudentName);
+	System.out.println("CourseName:"+StudentAddress);
+	}
+	public void Student11(Integer StudentId, String StudentName, String coursename)
+	{
+	System.out.println("Sample output2:");
+	System.out.println("Student id:"+StudentId);
+	System.out.println("Student Name:"+StudentName);
+	System.out.println("CourseName:"+coursename);}
+	
+	public static void main (String args[]) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Sample Input1:");
+	System.out.println("Enter Student's Id :");
+	Integer StudentId=sc.nextInt();
+	sc.nextLine();
+	System.out.println("Enter Student's Name :");
+	String StudentName=sc.nextLine();
+	sc.nextLine();
+	System.out.println("Enter coursename :");
+	String coursename=sc.nextLine();
+	String yn=sc.nextLine();
+	System.out.println(yn);
+	Student Student = new Student(StudentId,StudentName, coursename);
+	 
+	System.out.println("Sample output1:");
+	System.out.println("Student id:"+StudentId);
+	System.out.println("Student Name:"+StudentName);
+	System.out.println("CourseName"+coursename);
+
+	
+	
+	}
+	}
+	
+//-------------------------------------------------------------------------------------------------------------------------
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+package company;
+import java.io.*;
+import java.util.*;
+
+
+public class Book1 { 
+	
+	private static final String String = null;
+	private String bookName;
+private int bookPrice;
+private String authorName;
+
+
+public void Book(String bookName,int bookPrice, String authorName) {
+	System.out.println("Sample output1:");
+	System.out.println("Book Name:"+bookName);
+	System.out.println("Book Price:"+bookPrice);
+	System.out.println("Author Name:"+authorName);
+	System.out.println("Total number of Books avilable :");
+}
+	public static void main (String args[] ) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Sample Input1:");
+		System.out.println("Enter Book Name :");
+		String bookName =sc.nextLine();
+		sc.nextLine();
+		System.out.println("Enter Book price :");
+		String bookPrice=sc.nextLine();
+		System.out.println("Enter Ayther Name :");
+		String authorName=sc.nextLine();
+		System.out.println("Total number of Books avilable :");
+		String yn=sc.nextLine();
+	
+		Book Book = new Book() ;
+		System.out.println(" bookName "+bookName  );
+		System.out.println(" bookprice "+bookPrice );
+		System.out.println("Author Name:"+authorName  );
+		System.out.println("Total number of Books avilable :");
+		System.out.println(yn);
+}
+
+}
+---------------------------------------------------------------------------------------------------------------------------
+private String firstName;
+ private String lastName;
+ private String address;
+ private String username;
+ 
+ // The constructor method
+ public Person(String personFirstname, String personLastName, String personAddress, String personUsername)
+ {
+ firstName = personFirstName;
+ lastName = personLastName;
+ address = personAddress;
+ username = personUsername;
+ }
+ 
+ // A method to display the state of the object to the screen
+ public void displayPersonDetails()
+ {
+ System.out.println("Name: " + firstName + " " + lastName);
+ System.out.println("Address: " + address);
+ System.out.println("Username: " + username);
+ }
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
