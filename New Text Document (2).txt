@@ -1,0 +1,46 @@
+import java.util.*;
+public class TestCode
+{ public static void main(String[] args) {
+int n;
+String[] str;
+int cnt=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter num");
+n=sc.nextInt();
+sc.nextLine();
+str=new String[n];
+System.out.print("Enter String");
+for (int i=0;i<n;i++) {
+str[i]=sc.nextLine();
+}
+ArrayList<String> game=new ArrayList<>();
+for(int j=0;j<n;j++)
+{
+cnt=str[j].length();
+if(cnt%2==1)
+{
+game.add(str[j]);
+}
+}
+if(game.size()==0)
+{
+System.out.println("Better luck next time");
+}
+else
+{
+Iterator itr=game.iterator();
+int max=-1;
+String s="";
+while(itr.hasNext())
+{
+String temp=(String)itr.next();
+if(temp.length()>max)
+{
+s=temp;
+max=temp.length();
+}
+}
+System.out.println("Output:"+s);
+}
+}}
+
